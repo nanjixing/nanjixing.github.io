@@ -158,6 +158,122 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/01/11/%E5%A4%9A%E6%80%81%E7%9A%84%E5%A4%8D%E4%B9%A0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="nanxing Tang">
+      <meta itemprop="description" content="This is tangnanxing's Blog">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Tangnanxing's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/01/11/%E5%A4%9A%E6%80%81%E7%9A%84%E5%A4%8D%E4%B9%A0/" class="post-title-link" itemprop="url">多态的复习</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2021-01-11 18:22:53 / Modified: 18:23:17" itemprop="dateCreated datePublished" datetime="2021-01-11T18:22:53+08:00">2021-01-11</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="多态的复习"><a href="#多态的复习" class="headerlink" title="多态的复习"></a>多态的复习</h1><h2 id="多态的定义"><a href="#多态的定义" class="headerlink" title="多态的定义"></a>多态的定义</h2><p>​    多态是面向对象三大特征之一，是指同一个行为，不同的子类体现出来了不同的形态。</p>
+<p>我们把同一个行为设计为父类，不同的子类中的不同的形态通过对父类的行为的重写完成自己的形态。</p>
+<h2 id="多态的示例"><a href="#多态的示例" class="headerlink" title="多态的示例"></a>多态的示例</h2><h3 id="OOA-、OOD、OOP"><a href="#OOA-、OOD、OOP" class="headerlink" title="OOA 、OOD、OOP"></a>OOA 、OOD、OOP</h3><p>​    首先说明多态和属性无关只和方法有关。</p>
+<p>​    举一个衣服的例子，衣服用布做成（所有的衣服都是用布做的，因此设计为子类的继承方法），衣服有颜色（不同的衣服有不同的颜色，以纯色为例）因此设计为子类重写的方法。不同的衣服有自己的其他的特性设计为子类特有的方法。</p>
+<p><code>Clothes.java</code></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Clothes</span> </span>&#123;</span><br><span class="line">    <span class="comment">//父类成员变量</span></span><br><span class="line">    <span class="keyword">private</span> String clothesName = <span class="string">&quot;衣服&quot;</span>;</span><br><span class="line">    <span class="comment">//子类继承的方法</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">clothesMaked</span><span class="params">()</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;Clothes is maked by cloth&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//子类重写的方法</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">clothesColor</span><span class="params">()</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;Clothes is ...&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><code>BlackClothes.java</code></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">BlackClothes</span> <span class="keyword">extends</span> <span class="title">Clothes</span></span>&#123;</span><br><span class="line">    <span class="comment">//成员变量</span></span><br><span class="line">    <span class="keyword">private</span> String blackClothes = <span class="string">&quot;黑衣服&quot;</span>;</span><br><span class="line">    <span class="comment">//从父类继承一个方法clothesMaked()</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">//重写父类方法</span></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">clothesColor</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">super</span>.clothesColor();</span><br><span class="line">        System.out.println(<span class="string">&quot;BlackClothes is Black&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//类特有的方法</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">blackDeputy</span><span class="params">()</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;Black is a deputy of depress&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><code>WhiteClothes.java</code></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">WhiteClothes</span> <span class="keyword">extends</span> <span class="title">Clothes</span></span>&#123;</span><br><span class="line">    <span class="comment">//成员变量</span></span><br><span class="line">    <span class="keyword">private</span> String whiteClothes = <span class="string">&quot;白衣服&quot;</span>;</span><br><span class="line">    <span class="comment">//从父类继承一个方法clothesMaked()</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">//重写父类方法</span></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">clothesColor</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">super</span>.clothesColor();</span><br><span class="line">        System.out.println(<span class="string">&quot;WhiteClothes is White&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//类特有的方法</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">whiteDeputy</span><span class="params">()</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;White is a deputy of tidy&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>卖衣服的商店对不同衣服进行介绍</p>
+<p><code>ClothesShop.java</code></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ClothesShop</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">clothesIntro</span><span class="params">(Clothes clothes)</span></span>&#123;</span><br><span class="line">        clothes.clothesColor();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Clothes clothes = <span class="keyword">new</span> Clothes();</span><br><span class="line">        clothesIntro(clothes);</span><br><span class="line">        BlackClothes blackClothes = <span class="keyword">new</span> BlackClothes();</span><br><span class="line">        clothesIntro(blackClothes);</span><br><span class="line">        WhiteClothes whiteClothes = <span class="keyword">new</span> WhiteClothes();</span><br><span class="line">        clothesIntro(whiteClothes);</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>运行结果：</p>
+<p>Clothes is …<br>Clothes is …<br>BlackClothes is Black<br>Clothes is …<br>WhiteClothes is White</p>
+<p>Process finished with exit code 0</p>
+<p>问题： 父类方法被子类多调用了两次</p>
+<p>原因：子类重写方法中出现了super关键字</p>
+<p>问题解决：注释掉<code>super.clothesColor();</code></p>
+<p>Clothes is …<br>BlackClothes is Black<br>WhiteClothes is White</p>
+<p>Process finished with exit code 0</p>
+<h3 id="多态的重点"><a href="#多态的重点" class="headerlink" title="多态的重点"></a>多态的重点</h3><p>​    在ClothesShop.java中</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"> 		Clothes clothes = <span class="keyword">new</span> Clothes();</span><br><span class="line">        clothesIntro(clothes);</span><br><span class="line"><span class="comment">//        BlackClothes blackClothes = new BlackClothes();</span></span><br><span class="line">        Clothes  blackClothes = <span class="keyword">new</span> BlackClothes();</span><br><span class="line">        clothesIntro(blackClothes);</span><br><span class="line"><span class="comment">//        WhiteClothes whiteClothes = new WhiteClothes();</span></span><br><span class="line">	<span class="comment">//=左边是编译时类型          =右边时运行时类型</span></span><br><span class="line">        Clothes whiteClothes = <span class="keyword">new</span> WhiteClothes();</span><br><span class="line">        clothesIntro(whiteClothes);</span><br></pre></td></tr></table></figure>
+<p>结果依然如上所示。</p>
+<p>也就是说=右边是我们运行时发现时WhiteClothes类对象，那末就会调用它所重写的方法</p>
+<p>总结：在ClothesShop方法中传入父类作为形参，在调用方法时传入子类对象作为实参，能够增加代码的复用，我们增加新的子类也无需修改，提高了可扩展性，符合OCP原则（开闭原则)。</p>
+<h2 id="类型的转换"><a href="#类型的转换" class="headerlink" title="类型的转换"></a>类型的转换</h2><p>​    基本数据类型的转换</p>
+<p>​        </p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> i = <span class="number">20</span>;</span><br><span class="line">     <span class="keyword">double</span> d;</span><br><span class="line">     d = i;<span class="comment">//自动转换</span></span><br></pre></td></tr></table></figure>
+<p>​    引用数据类型的类型转换</p>
+<ol>
+<li><p>向上转型</p>
+<p>将子类对象赋给父类引用，称为向上转型（upcasting），<strong>自动进行类型转换</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"> <span class="comment">//向上转型</span></span><br><span class="line">        Clothes clothes = <span class="keyword">new</span> BlackClothes();</span><br><span class="line">        clothes.clothesMaked();<span class="comment">//可以调用子类继承的方法</span></span><br><span class="line">        clothes.clothesColor();<span class="comment">//可以调用子类重写的方法</span></span><br><span class="line"><span class="comment">//        clothes.blackDeputy();//无法调用子类特有的方法</span></span><br></pre></td></tr></table></figure>
+
+
+</li>
+</ol>
+<ol start="2">
+<li><p>向下转型</p>
+<p>将父类的引用变量转换为子类类型，称为向下转型（downcasting）。<strong>向下转型后就可以调用子类特有的方法了</strong></p>
+<ul>
+<li>基本类型和引用类型都需要进行强制转换</li>
+<li>向下转型之前肯定进行了向上转型</li>
+<li>要使用<code>instanceof</code>进行判断避免异常</li>
+<li>向下转型之后可以调用子类特有的方法</li>
+</ul>
+<p><code>instanceof</code>使用：</p>
+<pre><code>- 对象 instanceof 类名或者接口命
+- **左边的对象和右边的类型必须在继承树上有继承关系**</code></pre>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"> <span class="comment">//向下转型</span></span><br><span class="line">        BlackClothes blackClothes = (BlackClothes) clothes;<span class="comment">//强制转换不出错</span></span><br><span class="line"><span class="comment">//        WhiteClothes whiteClothes = (WhiteClothes) clothes;//强制转换异常java.lang.ClassCastException</span></span><br><span class="line">        <span class="keyword">if</span> (clothes <span class="keyword">instanceof</span> BlackClothes)&#123;</span><br><span class="line">            BlackClothes bc = (BlackClothes)clothes;</span><br><span class="line">            bc.blackDeputy();</span><br><span class="line">        &#125;<span class="keyword">else</span> <span class="keyword">if</span>(clothes <span class="keyword">instanceof</span> WhiteClothes)&#123;</span><br><span class="line">            WhiteClothes wc = (WhiteClothes) clothes;</span><br><span class="line">            wc.whiteDeputy();</span><br><span class="line">        &#125;</span><br></pre></td></tr></table></figure>
+
+
+</li>
+</ol>
+<h2 id="简单工厂模式"><a href="#简单工厂模式" class="headerlink" title="简单工厂模式"></a>简单工厂模式</h2><p>​    前边我们把父类做方法的形参，这里工厂模式把父类类型做方法的返回值类型。</p>
+<p>​    简单工厂模式时工厂方法模式的简化版</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">SimpleFactory</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="comment">//衣服工厂做一件黑色衣服</span></span><br><span class="line">        Clothes clo = ClothesFactory.getClothes(<span class="string">&quot;black&quot;</span>);</span><br><span class="line">        clo.clothesColor();</span><br><span class="line">        clo.clothesMaked();</span><br><span class="line">        <span class="comment">//乡下类型转换</span></span><br><span class="line">        BlackClothes blackClothes = (BlackClothes) clo;</span><br><span class="line">        blackClothes.blackDeputy();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">ClothesFactory</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Clothes <span class="title">getClothes</span><span class="params">(String type)</span></span>&#123;</span><br><span class="line"><span class="comment">//        if(&quot;&quot;.equals(type)) return null;</span></span><br><span class="line">        Clothes clothes = <span class="keyword">null</span>;</span><br><span class="line">        <span class="keyword">if</span> (<span class="string">&quot;black&quot;</span>.equals(type))&#123;</span><br><span class="line">            clothes = <span class="keyword">new</span> BlackClothes();</span><br><span class="line">        &#125;<span class="keyword">else</span> <span class="keyword">if</span>(<span class="string">&quot;white&quot;</span>.equals(type))&#123;</span><br><span class="line">            clothes = <span class="keyword">new</span> WhiteClothes();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> clothes;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
     <link itemprop="mainEntityOfPage" href="http://example.com/2021/01/11/Markdowm%E4%BD%BF%E7%94%A8%E8%AE%B0%E5%BD%95/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -572,7 +688,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">4</span>
+          <span class="site-state-item-count">5</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
