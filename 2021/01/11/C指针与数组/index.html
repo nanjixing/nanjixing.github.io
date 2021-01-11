@@ -20,30 +20,32 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="This is tangnanxing&#39;s Blog">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Tangnanxing&#39;s Blog">
-<meta property="og:url" content="http://example.com/index.html">
+  <meta name="description" content="C指针与数组1.指针的声明​    指针存的就是一个地址，系统中用8字节存储地址，所以指针变量的大小是系统中存储地址的大小 ​    指针的声明 123int* p;&#x2F;&#x2F;理解为这是一个新的指针变量类型int *p, *p1;p &#x3D; &amp;a;&#x2F;&#x2F;&amp;是获取地址 ​    获取指针所指的元素*p 2.指针的操作​    指针变量支持自增和自减操作（或者加减），但是自增和自减是跨越了他所指向">
+<meta property="og:type" content="article">
+<meta property="og:title" content="C指针与数组">
+<meta property="og:url" content="http://example.com/2021/01/11/C%E6%8C%87%E9%92%88%E4%B8%8E%E6%95%B0%E7%BB%84/index.html">
 <meta property="og:site_name" content="Tangnanxing&#39;s Blog">
-<meta property="og:description" content="This is tangnanxing&#39;s Blog">
+<meta property="og:description" content="C指针与数组1.指针的声明​    指针存的就是一个地址，系统中用8字节存储地址，所以指针变量的大小是系统中存储地址的大小 ​    指针的声明 123int* p;&#x2F;&#x2F;理解为这是一个新的指针变量类型int *p, *p1;p &#x3D; &amp;a;&#x2F;&#x2F;&amp;是获取地址 ​    获取指针所指的元素*p 2.指针的操作​    指针变量支持自增和自减操作（或者加减），但是自增和自减是跨越了他所指向">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2021-01-11T07:25:36.000Z">
+<meta property="article:modified_time" content="2021-01-11T07:26:04.118Z">
 <meta property="article:author" content="nanxing Tang">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://example.com/">
+<link rel="canonical" href="http://example.com/2021/01/11/C%E6%8C%87%E9%92%88%E4%B8%8E%E6%95%B0%E7%BB%84/">
 
 
 <script id="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
-    isHome : true,
-    isPost : false,
+    isHome : false,
+    isPost : true,
     lang   : 'en'
   };
 </script>
 
-  <title>Tangnanxing's Blog</title>
+  <title>C指针与数组 | Tangnanxing's Blog</title>
   
 
 
@@ -152,102 +154,10 @@
         <div class="content-wrap">
           
 
-          <div class="content index posts-expand">
+          <div class="content post posts-expand">
             
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/01/11/Markdowm%E4%BD%BF%E7%94%A8%E8%AE%B0%E5%BD%95/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="nanxing Tang">
-      <meta itemprop="description" content="This is tangnanxing's Blog">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Tangnanxing's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/01/11/Markdowm%E4%BD%BF%E7%94%A8%E8%AE%B0%E5%BD%95/" class="post-title-link" itemprop="url">Markdowm使用记录</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-              
-
-              <time title="Created: 2021-01-11 15:26:35 / Modified: 15:26:55" itemprop="dateCreated datePublished" datetime="2021-01-11T15:26:35+08:00">2021-01-11</time>
-            </span>
-
-          
-
-        </div>
-      </header>
 
     
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <ul>
-<li><p><input checked="" disabled="" type="checkbox">  任务列表</p>
-</li>
-<li><p><input disabled="" type="checkbox">  这是默认没有选中</p>
-</li>
-<li><p>注意有两个空格</p>
-</li>
-<li><p>无序列表* 或者- 后边都有空格</p>
-</li>
-</ul>
-<p>块引用</p>
-<blockquote>
-<p>这是一个块引用</p>
-</blockquote>
-<p>表格</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">First Header | Second Header</span><br><span class="line">------------ | -------------</span><br><span class="line">Content from cell 1 | Content from cell 2</span><br><span class="line">Content in the first column | Content in the second column</span><br><span class="line"></span><br><span class="line">| First Header                | Second Header                |</span><br><span class="line">| :-------------------------- | ---------------------------- |</span><br><span class="line">| Content from cell 1         | Content from cell 2          |</span><br></pre></td></tr></table></figure>
-<table>
-<thead>
-<tr>
-<th align="left">First Header</th>
-<th>Second Header</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left">Content from cell 1</td>
-<td>Content from cell 2</td>
-</tr>
-<tr>
-<td align="left">Content in the first column</td>
-<td>Content in the second column</td>
-</tr>
-</tbody></table>
-<p><del>你好</del> 划线</p>
-<p>:hugs:  ==表情==</p>
-<p>==Typora== 高亮显示</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
@@ -263,10 +173,9 @@
       <meta itemprop="name" content="Tangnanxing's Blog">
     </span>
       <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/01/11/C%E6%8C%87%E9%92%88%E4%B8%8E%E6%95%B0%E7%BB%84/" class="post-title-link" itemprop="url">C指针与数组</a>
-        </h2>
+        <h1 class="post-title" itemprop="name headline">
+          C指针与数组
+        </h1>
 
         <div class="post-meta">
             <span class="post-meta-item">
@@ -290,7 +199,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="C指针与数组"><a href="#C指针与数组" class="headerlink" title="C指针与数组"></a>C指针与数组</h1><h2 id="1-指针的声明"><a href="#1-指针的声明" class="headerlink" title="1.指针的声明"></a>1.指针的声明</h2><p>​    指针存的就是一个地址，系统中用8字节存储地址，所以指针变量的大小是系统中存储地址的大小</p>
+        <h1 id="C指针与数组"><a href="#C指针与数组" class="headerlink" title="C指针与数组"></a>C指针与数组</h1><h2 id="1-指针的声明"><a href="#1-指针的声明" class="headerlink" title="1.指针的声明"></a>1.指针的声明</h2><p>​    指针存的就是一个地址，系统中用8字节存储地址，所以指针变量的大小是系统中存储地址的大小</p>
 <p>​    指针的声明</p>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span>* p;<span class="comment">//理解为这是一个新的指针变量类型</span></span><br><span class="line"><span class="keyword">int</span> *p, *p1;</span><br><span class="line">p = &amp;a;<span class="comment">//&amp;是获取地址</span></span><br></pre></td></tr></table></figure>
 <p>​    获取指针所指的元素<code>*p</code></p>
@@ -333,180 +242,33 @@
 
 
 
-      
     </div>
 
     
     
     
+
       <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/01/11/Github%E5%AD%A6%E4%B9%A0/">
+        
 
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="nanxing Tang">
-      <meta itemprop="description" content="This is tangnanxing's Blog">
-    </span>
 
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Tangnanxing's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/01/11/Github%E5%AD%A6%E4%B9%A0/" class="post-title-link" itemprop="url">Github学习.md</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-              
-
-              <time title="Created: 2021-01-11 15:10:12 / Modified: 15:13:40" itemprop="dateCreated datePublished" datetime="2021-01-11T15:10:12+08:00">2021-01-11</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="Github入门与实践读书笔记"><a href="#Github入门与实践读书笔记" class="headerlink" title="Github入门与实践读书笔记"></a>Github入门与实践读书笔记</h1><p>[TOC]</p>
-<h2 id="第四章"><a href="#第四章" class="headerlink" title="第四章"></a>第四章</h2><h3 id="4-1基本操作"><a href="#4-1基本操作" class="headerlink" title="4.1基本操作"></a>4.1基本操作</h3><p>​    先进入文件夹，在创建文件</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">cd 仓库的绝对路径</span><br><span class="line">touch README.md&#x2F;&#x2F;创建一个文件</span><br><span class="line">git status&#x2F;&#x2F;查看仓库状态</span><br><span class="line">git add&#x2F;&#x2F;像暂存区添加文件，并不会被记入Git仓库版本管理对象使用git status可以查看当前状态为untracked</span><br><span class="line">   git commit&#x2F;&#x2F;将暂存区的文件实际保存到仓库的历史纪录当中，注意在进入编辑器之后按ins可以进入插入模式，编辑完成退出并保存先按esc再按两下大写Z即可</span><br><span class="line">   	git commit -m &quot;对提交的概述信息&quot;</span><br><span class="line">   		git commit 中提交格式：第一行为简述</span><br><span class="line">   						第二行为空行</span><br><span class="line">   						第三行为更改详细内容</span><br><span class="line">   	git commit -am &quot;对提交的概述信息&quot; </span><br><span class="line">   git log &#x2F;&#x2F; 查看日志</span><br><span class="line">   	git log --pretty&#x3D;short &#x2F;&#x2F;之查看第一行简述信息</span><br><span class="line">   	git log 指定文件&#x2F;目录的日志 &#x2F;&#x2F;查看指定文件目录</span><br><span class="line">   	git log -p &#x2F;&#x2F;查看提交前后的差别</span><br><span class="line">   		git log -p 指定文件&#x2F;目录的日志</span><br><span class="line">       git log --graph &#x2F;&#x2F;用图表输出提交日志</span><br><span class="line">   git diff &#x2F;&#x2F;查看工作树、暂存区、最新提交之间的差别 +表示新增，-表示删除</span><br><span class="line">   	git diff HEAD &#x2F;&#x2F;查看工作树与最新提交之间的差别，不妨在每次git commit之前查看一下差别</span><br></pre></td></tr></table></figure>
-<h3 id="4-2-分支操作"><a href="#4-2-分支操作" class="headerlink" title="4.2 分支操作"></a>4.2 分支操作</h3><p>​    进行多个并行作业时使用</p>
-<p>​    1.分支的创建</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git branch &#x2F;&#x2F;显示分支列表</span><br><span class="line">git branch 分支名 &#x2F;&#x2F;创建一个分支但是并未进入</span><br><span class="line">git checkout 分支名 &#x2F;&#x2F;进入分支</span><br><span class="line">git checkout -b 分支名&#x2F;&#x2F;一次执行2，3行的操作</span><br><span class="line">git checkout - &#x2F;&#x2F;-代表上次的分支</span><br></pre></td></tr></table></figure>
-<p>​    master分支使主干分支，一个版本发布有一个。如果有多个版本发布应该有多个。</p>
-<p>​    2.分支的合并</p>
-<p>​    <code>git merge</code></p>
-<p>​    分支合并流程<strong>首先进入要合并的分支的主分支</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">首先进入要合并的分支的主分支</span><br><span class="line">git merge --no-ff 该分支名 &#x2F;&#x2F;该语句进行分支合并，此时会进入文本编辑器，同前</span><br></pre></td></tr></table></figure>
-<h3 id="4-3-更改提交的操作，回溯和冲突合并"><a href="#4-3-更改提交的操作，回溯和冲突合并" class="headerlink" title="4.3 更改提交的操作，回溯和冲突合并"></a>4.3 更改提交的操作，回溯和冲突合并</h3><p>​    <code>git reset</code> 回溯历史版本</p>
-<p>​    <strong>1.<code>git reset --hard 时间点的hash值 </code></strong> <strong><em>要先进入到要合并的主分支比如</em>master分支</strong></p>
-<p>​        <code>git log</code>查看的是以当前状态为终点的历史日志</p>
-<p>​        <code>git reflog</code>查看的是当前仓库执行过的操作日志</p>
-<p>​    <strong>2.合并时的冲突</strong></p>
-<p>​        一般要删除其中之一，我们进行更改之后再次add commit即可</p>
-<p>​    <strong>3.修改提交信息</strong></p>
-<p>​        <code>git commit --amend</code><strong>实际操作时我弹出了一个⚠选项选E继续进行即可</strong>进入文本编辑同前</p>
-<p>​        Tips：<strong>进入仓库时现金仓库所在目录再进仓库</strong></p>
-<p>​    <strong>4.压缩提交之前的错误历史</strong></p>
-<p>​        1.<code>git rebase -i HEAD~2</code>选定当前分支中包含HEAD在内的两个最新历史记录为对象</p>
-<p>​        2.在弹出的编辑器中将要合并的文件的<code>pick</code>字段改为<code>fixup</code></p>
-<h3 id="4-4-推送至远程仓库"><a href="#4-4-推送至远程仓库" class="headerlink" title="4.4 推送至远程仓库"></a>4.4 推送至远程仓库</h3><p>​        <strong><em>首先在github上创建仓库是不要选择readme文件，只创建一个空项目</em></strong></p>
-<p>​        <code>git remote add origin ssh链接</code>自动将远程仓库的名称设置为origin(标识符)</p>
-<p>​        <code>git push</code> 推送至远程仓库</p>
-<p>​        <code>git push -u origin master</code> <strong>master是我们当前所在的分支，如果在其他分支可以替换，-u参数可以将origin仓库的master（可以替换）分支作为本地仓库master(可以替换)当前分支的upstream</strong>,这样我们本地仓库获取是可以直接获取，见下。</p>
-<h3 id="4-5-从远程仓库获取"><a href="#4-5-从远程仓库获取" class="headerlink" title="4.5 从远程仓库获取"></a>4.5 从远程仓库获取</h3><p>​        1.<code>git clone ssh链接</code>要另外换一个文件夹用于模拟不同用户</p>
-<p>​            默认到master分支可以使用<code>git branch -a</code>命令进行查看当前分支本地仓库和远程仓库信息</p>
-<p>​        2.<code>git checkout -b 本地分支名 origin/远程仓库分支名</code>会创建一个和远程仓库分支内容完全一样的分支并进入该分支</p>
-<p>​        3.再次推送直接<code>git push</code>即可</p>
-<p>​        4.<code>git pull origin 分支名</code>将本地分支更新 到和远程仓库的分支的最新状态</p>
-<h3 id="4-6-Git-资料"><a href="#4-6-Git-资料" class="headerlink" title="4.6 Git 资料"></a>4.6 Git 资料</h3><p>​        <a target="_blank" rel="noopener" href="http://git-scm.com/book/zh/v2">Pro Git</a></p>
-<p>​        <a target="_blank" rel="noopener" href="https://learngitbranching.js.org/?locale=zh_CN">LearnGitBranching</a></p>
-<p>​        <a target="_blank" rel="noopener" href="http://try.github.io/">tryGit</a></p>
-
-      
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2021/01/11/Github%E5%AD%A6%E4%B9%A0/" rel="prev" title="Github学习.md">
+      <i class="fa fa-chevron-left"></i> Github学习.md
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2021/01/11/Markdowm%E4%BD%BF%E7%94%A8%E8%AE%B0%E5%BD%95/" rel="next" title="Markdowm使用记录">
+      Markdowm使用记录 <i class="fa fa-chevron-right"></i>
+    </a></div>
     </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
       </footer>
+    
   </article>
   
   
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/01/11/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="nanxing Tang">
-      <meta itemprop="description" content="This is tangnanxing's Blog">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Tangnanxing's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/01/11/hello-world/" class="post-title-link" itemprop="url">Hello World</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2021-01-11 11:27:11" itemprop="dateCreated datePublished" datetime="2021-01-11T11:27:11+08:00">2021-01-11</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-
   
 
 
@@ -559,6 +321,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#C%E6%8C%87%E9%92%88%E4%B8%8E%E6%95%B0%E7%BB%84"><span class="nav-number">1.</span> <span class="nav-text">C指针与数组</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-%E6%8C%87%E9%92%88%E7%9A%84%E5%A3%B0%E6%98%8E"><span class="nav-number">1.1.</span> <span class="nav-text">1.指针的声明</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-%E6%8C%87%E9%92%88%E7%9A%84%E6%93%8D%E4%BD%9C"><span class="nav-number">1.2.</span> <span class="nav-text">2.指针的操作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-%E6%8C%87%E9%92%88%E4%B8%8E%E6%95%B0%E7%BB%84"><span class="nav-number">1.3.</span> <span class="nav-text">3.指针与数组</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-%E6%8C%87%E9%92%88%E4%B8%8E%E5%87%BD%E6%95%B0%E5%8F%82%E6%95%B0"><span class="nav-number">1.4.</span> <span class="nav-text">4.指针与函数参数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#const%E7%9A%84%E4%BD%BF%E7%94%A8"><span class="nav-number">1.4.1.</span> <span class="nav-text">const的使用</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-c-%E4%B8%AD%E7%9A%84%E5%BC%95%E7%94%A8"><span class="nav-number">1.5.</span> <span class="nav-text">5.c++中的引用</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
